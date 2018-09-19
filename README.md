@@ -10,3 +10,4 @@ This project is an interactive tool to visualize FIFA 18 video game based on HTM
 ```
 > python -m SimpleHTTPServer 
 ```
+* The demo of the webpage can be seen in *Demo.gif* file. Also, the project presenation slides and a full report can be viewed in *Viz.pdf*/*Viz.pptx* and *Viz_Project_Report.pdf* respectively.
