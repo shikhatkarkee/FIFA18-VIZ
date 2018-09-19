@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fifa 2018</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rock Salt' rel='stylesheet'>
+
+    <script src="tableau.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="initViz();">
+  <nav class="navbar navbar-inverse" id= "main-navbar">
+    <div class="container-fluid" >
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a data-toggle="collapse" href="#about" role="button" aria-expanded="false" aria-controls="collapseExample">About</a></li>
+        <li><a href="manual.html" role="button">Manual</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="Viz.pdf" role="button" target="_blank">Presentation pdf</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="collapse" id="about">
+    <div class="card card-body">
+      <center> <strong> <h3>Visualization of FIFA 18 statistics.</h3> </strong> </center> Being one of the most popular games, FIFA gamers still face some problems when they want to get a player for their team with specific attributes. By analyzing the dataset, we would to make it easier to visualize the attributes of the players. In addition, we would also show the inter-relationship between the players. The creaters of this project are Shikhat Karkee (s.karkee@jacobs-university.de) and Sabin Bhandari (sa.bhandari@jacobs-university.de).
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="page-header" style="font-family: 'Aldrich';font-size: 32px;">
+        <h1>FIFA 18 Stastics <small>Game On! </small></h1>
+      </div> 
+      <div class="hero-section">
+        <div class="jumbotron">
+          <h1>Changing the way you visualize FIFA!</h1>
+        </div>
+      </div> 
+      <br>
+      <div class="row" id = "style1">
+        <center><h2>Story Board</h2></center>
+      </div>
+      <br>
+      <br>
+      <div id="vizContainer"></div>
+
+      <br>
+      <div class="row" id = "style1">
+        <center><h2> Multiple Player Comparison</h2></center>
+      </div> 
+      <br>
+      <div class= "row-fluid">
+        <div class="col-xs-12">
+          <g class = "parallel"></g>
+        </div>
+      </div>
+      <script type="text/javascript" src="vis.js"></script>
+
+    </div> 
+  </div>    
+  <nav class="navbar navbar-default navbar-bottom" role="navigation">
+  <div class="container">
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+}
+
+@include google-font {
+    @include google-font(Lato, 300 400 700);    
+    @include google-font(Open Sans);    // <= not used just to show it works 
+    @include google-font(Marck Script, $text: 'F');
+} 
+
+#style1 {
+  display: block;
+  font-size: 2em;
+  font-family: "Lato";
+  font-weight: bold;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.page-header{
+  border-bottom: 2px solid;
+}
+
+/* Optional. To make navbar looks nicer */
+#main-navbar {
+  font: 1.2em Lato;
+  font-weight: bold;
+}
+
+/* Remove default <ul> margin and padding */
+#main-navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+#main-navbar li {
+  /* Use inline-block so that every element can have its height and width property */
+  display: inline-block;
+  /* Give padding so there's space above / below / on the sides of the menu */
+  padding: 10px 10px;
+}
+
+#main-navbar li a {
+  /* Remove the underline for the link */
+  text-decoration: none;
+}
+
+#main-navbar li a:hover {
+  /* When hovering around the menu, there'll be bottom border 3px width, distance is 3px from the menu */
+  border-bottom: 3px solid;
+  padding-bottom: 3px;
+}
+
+#about {
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font: 1.2em Lato;
+}
+
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  webkit-filter: blur(0.4px); 
+    filter: blur(0.4px);
+}
+
+
+
+
+svg {
+  font: 12px sans-serif;
+}
+
+.background path {
+  fill: none;
+  stroke: none;
+  stroke-width: 20px;
+  pointer-events: stroke;
+}
+
+.foreground path {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.axis .title {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis.string {
+  font-size: 6px;
+}
+
+.label {
+  -webkit-transition: fill 125ms linear;
+}
+
+.active .label:not(.inactive) {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.label.inactive {
+  fill: #ccc;
+}
+
+.foreground path.inactive {
+  stroke: #ccc;
+  stroke-opacity: .5;
+  stroke-width: 1px;
+}
+
+.hero-section {
+  background: url("cover.jpg") 70% no-repeat;
+  background-size: cover;
+  height: 80vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-section .jumbotron {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+  position: absolute;
+  left: 700px;
+  font: 3em Rock Salt;
+}
+
+.jumbotron {
+   background: rgba(0, 0, 0, 0.3); 
+   color: white;
+   border-radius: 50px 20px;
+   width: 528px;
+   height: 521px;
+   float: right;
+}
+.panel-default {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 50vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
